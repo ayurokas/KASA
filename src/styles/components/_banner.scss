@@ -1,0 +1,41 @@
+//scss bannier home
+.banner {
+  position: relative;
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 1.4rem;
+    filter: brightness(60%);
+
+    @media #{$small-down} {
+      border-radius: 1rem;
+    }
+  }
+
+  & h1 {
+    position: absolute;
+    color: white;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+
+    @media #{$small-down} {
+      font-size: 1.5rem;
+      white-space: pre-line;
+    }
+  }
+}
+
+.banner--home {
+  @media #{$small-down} {
+    height: 7rem;
+    justify-content: flex-start;
+  }
+}
