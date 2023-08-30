@@ -1,4 +1,4 @@
-//page logo + menu ( acceuille, a propos)
+//page logo + menu ( acceuile, a propos)
 
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
