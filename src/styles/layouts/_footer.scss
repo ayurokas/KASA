@@ -1,0 +1,19 @@
+footer {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.5rem 0 1.5rem 0;
+  margin-top: auto;
+  width: 100%;
+
+  @media #{$small-down} {
+    font-size: 0.8rem;
+    padding: 4rem 0;
+  }
+}
+.footer__logo {
+  width: 6rem;
+}

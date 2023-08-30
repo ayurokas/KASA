@@ -1,0 +1,12 @@
+$clr-primary: #ff6060;
+
+$clr-light-grey-01: #f7f7f7;
+$clr-light-grey-02: #e3e3e3;
+
+$big: 1240px;
+$medium: 980px;
+$small: 620px;
+
+$big-down: "only screen and (max-width: #{$big})";
+$medium-down: "only screen and (max-width: #{$medium})";
+$small-down: "only screen and (max-width: #{$small})";
