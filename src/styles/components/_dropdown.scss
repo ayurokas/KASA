@@ -20,15 +20,15 @@
   }
 
   &__arrow {
-    transform: rotate(0deg);
+    transform: rotate(180deg); /* Flèche inversée, vers le haut lorsque la dropdown est ouverte */
     transition: transform 0.4s ease-out;
-
+  
     &--open {
-      transform: rotate(180deg);
+      transform: rotate(0deg); /* Flèche initiale, vers le bas lorsque la dropdown est fermée */
       transition: transform 0.4s ease-out;
     }
   }
-
+  
   &__content {
     line-height: 150%;
     display: block;

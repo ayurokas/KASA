@@ -23,6 +23,7 @@ function Dropdown({ title, content, defaultOpen }) {
     <button onClick={() => setIsOpen(!isOpen)} className="dropdown__header">
       <h2>{title}</h2>
       <FontAwesomeIcon icon={faChevronUp} className={isOpen ? "dropdown__arrow dropdown__arrow--open" : "dropdown__arrow"} />
+
     </button>
   
     <div className={isOpen ? "dropdown__content" : "dropdown__content--hidden"}>
