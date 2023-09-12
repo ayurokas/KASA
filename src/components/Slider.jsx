@@ -29,6 +29,7 @@ const Slider = ({ pictures }) => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
+  // Fonction pour passer à l'image précédente
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
