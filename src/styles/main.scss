@@ -1,15 +1,14 @@
-//import fichier scss 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 @import "utils/variables";
 @import "base/base";
 @import "base/reset";
+@import "components/thumbnail";
+@import "components/dropdown";
+@import "components/Slideshow";
+@import "components/banner";
 @import "layouts/header";
 @import "layouts/footer";
-@import "pages/_home";
-@import "components/thumbnail";
-@import "components/banner";
+@import "pages/home";
+@import "pages/about";
 @import "pages/error";
-
-
-
-
+@import "pages/accommodation";

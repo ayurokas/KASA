@@ -1,5 +1,3 @@
-//page error 404
-
 import { NavLink } from "react-router-dom";
 
 function Error() {

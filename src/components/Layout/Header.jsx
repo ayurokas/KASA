@@ -3,18 +3,18 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../assets/kasa_logo.svg";
 
 function Header() {
-
-  // État pour déterminer si l'utilisateur a fait défiler la page au-delà de 5 pixels.
   const [scrollNav, setScrollNav] = useState(false);
 
-  // Mettre à jour l'état de scrollNav en fonction de la position de défilement.
-  const changeNav = () => setScrollNav(window.scrollY > 5);
+  const changeNav = () => {
+    if (window.scrollY > 5) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
 
-  // Ajouter un écouteur d'événement pour détecter le défilement de la page.
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
-    // Pour nettoyer l'écouteur d'événement
-    return () => window.removeEventListener("scroll", changeNav);
   }, []);
 
   return (
@@ -23,16 +23,11 @@ function Header() {
         <img src={Logo} className="header__logo" alt="Kasa Logo" />
       </NavLink>
       <nav className="header__links">
-        <NavLink 
-          to="/" 
-          className={({ isActive }) => (isActive ? "header__link--active" : "header__link")}
-        >
+        <NavLink to="/" className={({ isActive }) => (isActive ? "header__link--active" : "header__link")}>
           Accueil
         </NavLink>
-        <NavLink 
-          to="/about" 
-          className={({ isActive }) => (isActive ? "header__link--active" : "header__link")}
-        >
+
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "header__link--active" : "header__link")}>
           A propos
         </NavLink>
       </nav>
