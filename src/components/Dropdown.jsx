@@ -3,6 +3,9 @@
 
 import { useState } from "react";// Import de useState pour gérer l'état local
 import PropTypes from "prop-types"; // Import de PropTypes pour spécifier les types de props
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
 
 // Définition des types de props attendues par le composant Dropdown
 Dropdown.propTypes = {
@@ -17,24 +20,25 @@ function Dropdown({ title, content, defaultOpen }) {
 
   return (
     <article className="dropdown">
-      <button onClick={() => setIsOpen(!isOpen)} className="dropdown__header">
-        <h2>{title}</h2>
-        <i className={isOpen ? " fa-solid fa-chevron-up dropdown__arrow--open" : "fa-solid fa-chevron-up dropdown__arrow"}></i>
-      </button>
-
-      <div className={isOpen ? "dropdown__content" : "dropdown__content--hidden"}>
-        {Array.isArray(content) ? (
-           // Si "content" est un tableau, afficher son contenu sous forme de liste
-          <ul>
-            {content.map((el, index) => (
-              <li key={`${el}-${index}`}>{el}</li>
-            ))}
-          </ul>
-        ) : (
-          content
-        )}
-      </div>
-    </article>
+    <button onClick={() => setIsOpen(!isOpen)} className="dropdown__header">
+      <h2>{title}</h2>
+      <FontAwesomeIcon icon={faChevronUp} className={isOpen ? "dropdown__arrow dropdown__arrow--open" : "dropdown__arrow"} />
+    </button>
+  
+    <div className={isOpen ? "dropdown__content" : "dropdown__content--hidden"}>
+      {Array.isArray(content) ? (
+         // Si "content" est un tableau, afficher son contenu sous forme de liste
+        <ul>
+          {content.map((el, index) => (
+            <li key={`${el}-${index}`}>{el}</li>
+          ))}
+        </ul>
+      ) : (
+        content
+      )}
+    </div>
+  </article>
+  
   );
 }
 
