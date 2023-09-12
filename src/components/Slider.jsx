@@ -1,4 +1,6 @@
+// Import des dépendances React
 import React, { useState, useEffect } from "react";
+// Import des images pour les flèches gauche et droite
 import leftarrow from "../assets/leftarrow.svg";
 import rightarrow from "../assets/rightarrow.svg";
 let slideInterval;
