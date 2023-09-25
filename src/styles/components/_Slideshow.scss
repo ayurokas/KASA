@@ -55,6 +55,13 @@
   }
 }
 
+@media #{$small-down} {
+  .slider__nbr {
+    display: none;
+  }
+}
+
+
 .slide {
   opacity: 0;
   transition-duration: 1s ease;

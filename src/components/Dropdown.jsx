@@ -9,10 +9,17 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 // Définition des types de props attendues par le composant Dropdown
 Dropdown.propTypes = {
-  content: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.array.isRequired]),
+  // Contenu du dropdown : chaîne de caractères ou tableau.
+  content: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.array.isRequired,
+  ]),
+  // Titre du dropdown (chaîne de caractères obligatoire).
   title: PropTypes.string.isRequired,
+  // Indique si le dropdown doit être ouvert par défaut (booléen obligatoire).
   defaultOpen: PropTypes.bool.isRequired,
 };
+
 
 // Définition du composant "Dropdown" qui prend les props "title", "content" et "defaultOpen"
 function Dropdown({ title, content, defaultOpen }) {

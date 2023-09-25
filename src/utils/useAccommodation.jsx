@@ -1,3 +1,6 @@
+// Ce code définit un hook personnalisé pour récupérer des données depuis une URL.
+// Il inclut également une spécialisation pour obtenir des informations sur les hébergements.
+
 import { useFetch } from "./useFetch";
 
 export function useAccommodation() {
